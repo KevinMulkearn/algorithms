@@ -82,5 +82,3 @@ Copy the generated library files from \googletest\build\lib to \MinGW\lib
 
     cd scripts/windows
     test.bat
-
-TODO: Fix - Unit test will not work unless .dll are copied into unit test folder with exectable. 
