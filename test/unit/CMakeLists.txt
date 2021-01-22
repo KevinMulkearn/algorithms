@@ -8,4 +8,5 @@ target_link_libraries(unit_test_main
 
 add_custom_target(unit-tests)
 
+add_subdirectory(searching)
 add_subdirectory(sorting)
