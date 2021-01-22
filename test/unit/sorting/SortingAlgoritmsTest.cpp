@@ -1,3 +1,5 @@
+#include <vector>
+
 #include "SortingAlgorithms.h"
 
 #include <gtest/gtest.h>

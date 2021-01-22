@@ -1,14 +1,23 @@
-// #include <algorithm>
-// #include <iostream>
-// #include <vector>
-
 #include "SearchingAlgorithms.h"
 
 /**
- * Insertion Sort
- * Best O(n), Average, Worst O(n^2)
- * Moving through container, sorts one element at at time
- * moving each item into the correct position
+ * Sequential Search
+ * Best O(1), Average, Worst O(n)
+ * Brute-force approach to locate target value by
+ * checking the first value in the container and
+ * continuing until found.
  */
-
+bool Searching::Sequential(std::vector<int>& vec, int value)
+{
+    auto it = vec.cbegin();
+    while (it != vec.cend())
+    {
+        if (*it == value)
+        {
+            return true;
+        }
+        ++it;
+    }
+    return false;
+}
 
