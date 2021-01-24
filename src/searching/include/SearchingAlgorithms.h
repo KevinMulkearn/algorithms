@@ -18,7 +18,7 @@ public:
 
     bool Binary(std::vector<int>& /*vec*/, int /*value*/);
 
-    // bool Hash(std::vector<int>& /*vec*/, int /*value*/);
+    bool Hash(std::vector<int>& /*vec*/, int /*value*/);
 
     // bool BloomFilter(std::vector<int>& /*vec*/, int /*value*/);
 

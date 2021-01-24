@@ -38,6 +38,7 @@ TEST(SequentialSearch, noContainerElements)
     EXPECT_EQ(found, false);
 }
 
+
 TEST(BinarySearch, binarySearchFound)
 {
     Searching search;
@@ -69,6 +70,40 @@ TEST(BinarySearch, noContainerElements)
     int needle{40};
 
     auto found = search.Binary(haystack, needle);
+
+    EXPECT_EQ(found, false);
+}
+
+
+TEST(HashSearch, hashSearchSearchFound)
+{
+    Searching search;
+    std::vector<int> haystack{13,52,73,34,65,46,7,38,99,0,10,15,15,13};
+    int needle{7};
+
+    auto found = search.Hash(haystack, needle);
+
+    EXPECT_EQ(found, true);
+}
+
+TEST(HashSearch, hashSearchNotFound)
+{
+    Searching search;
+    std::vector<int> haystack{13,52,73,34,65,46,7,38,99,0,10,15,15,13};
+    int needle{40};
+
+    auto found = search.Hash(haystack, needle);
+
+    EXPECT_EQ(found, false);
+}
+
+TEST(HashSearch, noContainerElements)
+{
+    Searching search;
+    std::vector<int> haystack{};
+    int needle{40};
+
+    auto found = search.Hash(haystack, needle);
 
     EXPECT_EQ(found, false);
 }
