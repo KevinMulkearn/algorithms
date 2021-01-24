@@ -16,7 +16,7 @@ public:
 
     bool Sequential(std::vector<int>& /*vec*/, int /*value*/);
 
-    // bool Binary(std::vector<int>& /*vec*/, int /*value*/);
+    bool Binary(std::vector<int>& /*vec*/, int /*value*/);
 
     // bool Hash(std::vector<int>& /*vec*/, int /*value*/);
 

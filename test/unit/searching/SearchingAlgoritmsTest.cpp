@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <vector>
 
 #include "SearchingAlgorithms.h"
@@ -33,6 +34,41 @@ TEST(SequentialSearch, noContainerElements)
     int needle{40};
 
     auto found = search.Sequential(haystack, needle);
+
+    EXPECT_EQ(found, false);
+}
+
+TEST(BinarySearch, binarySearchFound)
+{
+    Searching search;
+    std::vector<int> haystack{1,2,3,4,5,6,7,8,9,0,10,11,12,13};
+    int needle{11};
+
+    std::sort(haystack.begin(), haystack.end());
+    auto found = search.Binary(haystack, needle);
+
+    EXPECT_EQ(found, true);
+}
+
+TEST(BinarySearch, binarySearchNotFound)
+{
+    Searching search;
+    std::vector<int> haystack{1,2,3,4,5,6,7,8,9,0,10,11,12,13};
+    int needle{40};
+
+    std::sort(haystack.begin(), haystack.end());
+    auto found = search.Binary(haystack, needle);
+
+    EXPECT_EQ(found, false);
+}
+
+TEST(BinarySearch, noContainerElements)
+{
+    Searching search;
+    std::vector<int> haystack{};
+    int needle{40};
+
+    auto found = search.Binary(haystack, needle);
 
     EXPECT_EQ(found, false);
 }
